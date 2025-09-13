@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "OpenSans";
+  font-feature-settings: 'liga' 1, 'calt' 1;
+  src: url("/font/InterVariable.woff2");
+}
+
+:root {
+  // accents
+  --dark-blueberry: #201e25;
+  --tropical-indigo: #9d8df1;
+  --periwinkle: #b8cdf8;
+  --aquamarine: #95f2d9;
+  --aquamarine-2: #1cfeba;
+
+  --app-background: light-dark(#d1cdc6,hsl(from #201e25ff h 12% 8%));
+  --app-color: light-dark(#2a2928, #e5e5e5);
+  --app-muted-color-1: light-dark(#605f5c, #9c9c9c);
+  --app-muted-color-2: light-dark(#84837d, #696969);
+  --app-font-family: "OpenSans", sans-serif;
+  --app-font-size: 0.925rem;
+
+  --app-border-color: light-dark(#aaa395, #332e41);
+  --app-border-width: 0.1rem;
+  --app-border-radius: 0.4rem;
+
+  --app-spacing-size: 0.4rem;
+  --app-padding-1: 0.4rem;
+  --app-padding-2: 0.8rem;
+
+  --app-chat-spacing: 1.25rem;
+}
+
+html {
+  font-family: var(--app-font-family);
+  font-size: var(--app-font-size);
+  color-scheme: light dark;
+  &[theme="light"] {
+    color-scheme: light;
+  }
+  &[theme="dark"] {
+    color-scheme: dark;
+  }
+}
+
+body {
+  color: var(--app-color);
+  background: var(--app-background);
+  
+  transition: background 0.3s ease;
+}
+
+hr {
+  border: none;
+  border-top: var(--app-border-width) solid var(--app-border-color);;
+}
+
+b {
+  font-weight: 600;
+}
+strong {
+  font-weight: 800;
+}
